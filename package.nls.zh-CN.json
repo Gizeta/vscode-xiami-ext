@@ -1,0 +1,6 @@
+{
+  "command.xiamiext.login": "登录",
+  "command.xiamiext.recommend": "显示每日推荐歌单",
+  "command.xiamiext.list": "显示当前歌单",
+  "category.xiamiext": "虾米"
+}

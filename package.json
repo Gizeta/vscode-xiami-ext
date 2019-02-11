@@ -1,0 +1,62 @@
+{
+	"name": "vscode-xiami-ext",
+	"displayName": "Xiami VSCode Extenstion",
+	"description": "An UNOFFICIAL Xiami extension for VSCode",
+	"version": "0.0.1",
+	"publisher": "Gizeta",
+	"repository": "https://github.com/Gizeta/vscode-xiami-ext",
+	"engines": {
+		"vscode": "^1.31.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:xiamiext.login",
+		"onCommand:xiamiext.recommend",
+		"onCommand:xiamiext.list"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "xiamiext.login",
+				"title": "%command.xiamiext.login%",
+				"category": "%category.xiamiext%"
+			},
+			{
+				"command": "xiamiext.recommend",
+				"title": "%command.xiamiext.recommend%",
+				"category": "%category.xiamiext%"
+			},
+			{
+				"command": "xiamiext.list",
+				"title": "%command.xiamiext.list%",
+				"category": "%category.xiamiext%"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install && npm run rebuild",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test",
+		"rebuild": "electron-rebuild --version 3.1.2"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^10.12.21",
+		"@types/request": "^2.48.1",
+		"electron-rebuild": "^1.8.4",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"@gizeta/speaker": "^0.5.0",
+		"lame": "^1.2.4",
+		"request": "^2.88.0",
+		"tough-cookie-filestore": "0.0.1"
+	}
+}

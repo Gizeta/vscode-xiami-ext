@@ -1,0 +1,6 @@
+{
+  "command.xiamiext.login": "Login",
+  "command.xiamiext.recommend": "Show Daily Recommended",
+  "command.xiamiext.list": "Show Current Playlist",
+  "category.xiamiext": "Xiami"
+}
